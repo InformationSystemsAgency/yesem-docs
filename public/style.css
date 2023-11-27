@@ -1,0 +1,242 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  position: relative;
+  font-weight: normal;
+}
+
+body {
+  min-height: 100vh;
+  transition: color 0.5s, background-color 0.5s;
+  line-height: 1.6;
+  font-family: NotoSans;
+  font-size: 15px;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  flex-direction: column;
+  height: 100vh;
+  display: flex;
+}
+
+nav {
+  min-height: 100px;
+  justify-content: center;
+  display: flex;
+
+  --tw-shadow: 0 0 6px rgba(0,0,0,.15);
+  --tw-shadow-colored: 0 0 6px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),var(--tw-ring-shadow, 0 0 #0000),var(--tw-shadow);
+}
+
+nav .nav-content{
+  height: 100%;
+  max-width: 80rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-grow: 1;
+
+  margin-left: 1.25rem;
+  margin-right: 1.25rem;
+}
+
+nav .nav-content .nav-content-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+nav .nav-content .nav-content-logo img {
+  height: 27px;
+}
+
+nav .nav-content span {
+  font-weight: 900;
+  font-size: 20px;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+main .main-content {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  height: 100%;
+  max-width: 80rem;
+
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  margin-left: 1.25rem;
+  margin-right: 1.25rem;
+}
+
+main .main-content .main-content-login {
+  width: 650px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  padding: 40px;
+  border-radius: 1rem;
+  gap: 20px;
+
+  --tw-shadow: 0px 4px 34px 0px rgba(0, 0, 0, .25);
+  --tw-shadow-colored: 0px 4px 34px 0px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),var(--tw-ring-shadow, 0 0 #0000),var(--tw-shadow);
+}
+
+main .main-content .main-content-login h1 {
+  font-size: 32px;
+  font-weight: 600;
+}
+
+main .main-content .main-content-login p {
+  font-size: 18px;
+  line-height: 150%;
+  margin-bottom: 30px;
+}
+
+footer {
+  min-height: 100px;
+  justify-content: center;
+  display: flex;
+
+  --tw-shadow: 0 0 6px rgba(0,0,0,.15);
+  --tw-shadow-colored: 0 0 6px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),var(--tw-ring-shadow, 0 0 #0000),var(--tw-shadow);
+}
+
+footer .footer-content {
+  height: 100%;
+  max-width: 80rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-grow: 1;
+
+  margin-left: 1.25rem;
+  margin-right: 1.25rem;
+}
+
+footer .footer-content img {
+  height: 22px;
+}
+
+.yesem-button {
+  display: inline-flex;
+  height: 40px;
+  padding: 8px 24px;
+  align-items: center;
+  gap: 8px;
+  border-radius: 4px;
+  border: 2px solid #2677CE;
+  background: #004FA3;
+  cursor: pointer;
+  color: #FFF;
+}
+
+.yesem-button .yesem-button-logo {
+  height: 12px;
+}
+
+.yesem-button .yesem-button-arrow {
+  height: 24px;
+}
+
+.yesem-button .yesem-button-divider {
+  width: 2px;
+  height: 18px;
+  background: #FFF;
+}
+
+.yesem-button .yesem-button-text {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.yesem-button:hover {
+  border-radius: 4px;
+  border: 2px solid #8099B8;
+  background: #2A4A70;
+}
+
+.yesem-button:active {
+  border-radius: 4px;
+  border: 2px solid #152538;
+  background: #203754;
+}
+
+.yesem-button:focus {
+  --tw-shadow: 0 0 0 .1875rem #BD13B8;
+  --tw-shadow-colored: 0 0 0 .1875rem var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),var(--tw-ring-shadow, 0 0 #0000),var(--tw-shadow);
+}
+
+.yesem-hint {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  align-self: stretch;
+
+  border-left: #004FA3 solid 8px;
+  padding: 16px;
+  padding-right: 0;
+  gap: 8px;
+}
+
+.yesem-hint img {
+  height: 32px;
+}
+
+.yesem-hint span {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%;
+}
+
+@media not all and (min-width: 768px) {
+  nav .nav-content span {
+    font-size: 18px;
+  }
+
+  main .main-content .main-content-login {
+    width: 100%;
+    padding: 10px;
+    box-shadow: none;
+  }
+
+  main .main-content .main-content-login h1 {
+    font-size: 24px;
+  }
+
+  main .main-content .main-content-login p {
+    font-size: 16px;
+  }
+
+  .yesem-hint {
+    border-left: #004FA3 solid 4px;
+    padding: 8px;
+    gap: 8px;
+  }
+
+  .yesem-hint img {
+    height: 24px;
+  }
+
+  .yesem-hint span {
+    font-size: 14px;
+  }
+}

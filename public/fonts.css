@@ -1,0 +1,61 @@
+/* NotoSansArmenian */
+@font-face {
+    font-family: NotoSansArmenian;
+    src: url('./assets/fonts/NotoSansArmenian.ttf');
+}
+
+
+/* NotoSans */
+@font-face {
+    font-family: NotoSans;
+    font-weight: 100;
+    src: url('./assets/fonts/NotoSans/NotoSans-Thin.ttf');
+}
+
+@font-face {
+    font-family: NotoSans;
+    font-weight: 200;
+    src: url('./assets/fonts/NotoSans/NotoSans-ExtraLight.ttf');
+}
+
+@font-face {
+    font-family: NotoSans;
+    font-weight: 300;
+    src: url('./assets/fonts/NotoSans/NotoSans-Light.ttf');
+}
+
+@font-face {
+    font-family: NotoSans;
+    font-weight: 400;
+    src: url('./assets/fonts/NotoSans/NotoSans-Regular.ttf');
+}
+
+@font-face {
+    font-family: NotoSans;
+    font-weight: 500;
+    src: url('./assets/fonts/NotoSans/NotoSans-Medium.ttf');
+}
+
+@font-face {
+    font-family: NotoSans;
+    font-weight: 600;
+    src: url('./assets/fonts/NotoSans/NotoSans-SemiBold.ttf');
+}
+
+@font-face {
+    font-family: NotoSans;
+    font-weight: 700;
+    src: url('./assets/fonts/NotoSans/NotoSans-Bold.ttf');
+}
+
+@font-face {
+    font-family: NotoSans;
+    font-weight: 800;
+    src: url('./assets/fonts/NotoSans/NotoSans-ExtraBold.ttf');
+}
+
+@font-face {
+    font-family: NotoSans;
+    font-weight: 900;
+    src: url('./assets/fonts/NotoSans/NotoSans-Black.ttf');
+}

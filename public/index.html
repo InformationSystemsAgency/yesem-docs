@@ -1,0 +1,80 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./fonts.css">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
+  <title>YesEm Node.js Client</title>
+  <script>
+    function login() {
+      location.href = './authenticate'
+    };
+  </script>
+</head>
+<body>
+  <nav>
+    <div class="nav-content">
+      <div class="nav-content-logo">
+        <img
+          src="./assets/yesem-logo.svg"
+          alt="YesEm Logo"
+        />
+      </div>
+
+      <span>Node.js Client</span>
+    </div>
+  </nav>
+
+  <main>
+    <div class="main-content">
+      <div class="main-content-login">
+        <h1>Welcome to YesEm Test Client!</h1>
+
+        <p>This application is created and maintained by the YesEm Platform Team. It is a test application and does not provide services. If you believe you are here by mistake, please visit the <a href="https://yesem.am">yesem.am</a> home page.</p>
+
+        <button
+          class="yesem-button"
+          onclick="login()"
+        >
+          <img
+            src="./assets/yesem-button-logo.svg"
+            alt="YesEm Logo"
+            class="yesem-button-logo"
+          />
+
+          <div class="yesem-button-divider"></div>
+
+          <span class="yesem-button-text">Login</span>
+
+          <img
+            src="./assets/yesem-button-arrow.svg"
+            alt="YesEm Button Arrow"
+            class="yesem-button-arrow"
+          />
+        </button>
+
+        <section class="yesem-hint">
+          <img
+            src="./assets/yesem-hint-icon.svg"
+            alt="YesEm Lock Icon"
+          >
+
+          <span>You will be directed to YesEm national identification platform</span>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <img
+        src="./assets/yesem-logo-footer.svg"
+        alt="YesEm Logo"
+      />
+
+      <span>© Republic of Armenia</span>
+    </div>
+  </footer>
+</body>
+</html>
