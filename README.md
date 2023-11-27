@@ -17,4 +17,6 @@ Navigate to the project directory you're interested in, and follow the steps wri
 An example client application for integration with the YesEm Authenticator Platform in NodeJS/TypeScript \
 Uses [openid-client](https://github.com/panva/node-openid-client) and [express](https://github.com/expressjs/express)
 
+Here is the link to the Node.js client: https://nodejs-client.test.yesem.am
+
 [Node.js folder](./examples/nodejs/)
