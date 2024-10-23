@@ -30,9 +30,10 @@ nav {
   --tw-shadow: 0 0 6px rgba(0,0,0,.15);
   --tw-shadow-colored: 0 0 6px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),var(--tw-ring-shadow, 0 0 #0000),var(--tw-shadow);
+  background-color: #004FA3;
 }
 
-nav .nav-content{
+nav .nav-content {
   height: 100%;
   max-width: 80rem;
 
@@ -58,6 +59,7 @@ nav .nav-content .nav-content-logo img {
 nav .nav-content span {
   font-weight: 900;
   font-size: 20px;
+  color: #FFFFFF;
 }
 
 main {
@@ -102,7 +104,6 @@ main .main-content .main-content-login h1 {
 main .main-content .main-content-login p {
   font-size: 18px;
   line-height: 150%;
-  margin-bottom: 30px;
 }
 
 footer {
