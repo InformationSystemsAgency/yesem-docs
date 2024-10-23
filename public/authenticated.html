@@ -10,6 +10,18 @@
     function logout() {
       location.href = './'
     };
+
+    // Function to get query parameter by name
+    function getQueryParam(param) {
+      const urlParams = new URLSearchParams(window.location.search);
+      return urlParams.get(param);
+    }
+
+    // Function to set the fullname when page loads
+    window.onload = function() {
+      const fullname = getQueryParam('full_name') || 'N/A';
+      document.getElementById('fullname-display').textContent = fullname;
+    };
   </script>
 </head>
 <body>
@@ -32,6 +44,8 @@
         <h1>Congrats you're authenticated 🎉</h1>
 
         <p>This application is created and maintained by the YesEm Platform Team. It is a test application and does not provide services. If you believe you are here by mistake, please visit the <a href="https://yesem.am">yesem.am</a> home page.</p>
+
+        <p>Full name: <span id="fullname-display"></span></p>
 
         <button
           class="yesem-button"

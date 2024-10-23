@@ -1,9 +1,15 @@
 import 'dotenv/config';
 import express from 'express';
+import { jwtDecode } from 'jwt-decode';
 import cookieParser from 'cookie-parser';
 import { join } from 'path';
 import { Issuer, generators } from 'openid-client';
 import { AES256Encrypt, AES256Decrypt } from './helpers';
+
+type UserInfo = {
+  first_name: string;
+  last_name: string;
+}
 
 const app = express();
 const port = process.env.YESEM_CLIENT_API_PORT;
@@ -69,8 +75,16 @@ async function main() {
     });
 
     // Use the ID Token to identify your user using the sub claim which has national identifier ID
-    // Also additional claims like given_name and family_name are set in the token
+    // Also additional claims like first_name, last_name and psn are set in the token
     console.log('Received and verified the ID Token', tokenSet.id_token);
+
+    let full_name = '';
+
+    if (tokenSet.id_token) {
+      const userInfo = jwtDecode<UserInfo>(tokenSet.id_token);
+
+      full_name = `${userInfo.first_name} ${userInfo.last_name}`
+    }
 
     // After the users identity is verified, establish your own session mechanism
     res.cookie('session', 'secureSessionJwt', { httpOnly: true, secure: true });
@@ -79,7 +93,7 @@ async function main() {
     res.clearCookie('code_verifier');
     res.clearCookie('state');
 
-    res.redirect('/authenticated');
+    res.redirect(`/authenticated?full_name=${full_name}`);
   });
 
   app.listen(port, () => {
