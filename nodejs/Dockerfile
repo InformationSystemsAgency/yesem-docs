@@ -1,12 +1,13 @@
 FROM node:lts-alpine
 
 ENV NODE_ENV=production
-WORKDIR /usr/src/app
+WORKDIR /usr/src/app/nodejs
 
-COPY ["package.json", "package-lock.json*", "npm-shrinkwrap.json*", "./"]
+COPY ["./nodejs/package.json", "./nodejs/package-lock.json*", "./nodejs/npm-shrinkwrap.json*", "./"]
 RUN npm install --production=false --silent && mv node_modules ../
 
-COPY . .
+COPY ./nodejs .
+COPY ./public /usr/src/app/public
 
 RUN npm run build
 RUN npm prune --production
