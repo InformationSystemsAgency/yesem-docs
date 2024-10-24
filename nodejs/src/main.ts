@@ -48,7 +48,7 @@ async function main() {
     const cookieOptions = {
       httpOnly: true,
       secure: true,
-      maxAge: 300000 // 5 minutes in milliseconds
+      maxAge: 600000 // 10 minutes in milliseconds (OAuth 2.0 BCP recommends 5-10 mins)
     };
 
     // These cookies need to be AES-256 encrypted so the user-agent (browser) can not read their values
