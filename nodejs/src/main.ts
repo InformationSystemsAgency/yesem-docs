@@ -42,7 +42,8 @@ async function main() {
       scope: process.env.YESEM_CLIENT_CLIENT_SCOPES,
       code_challenge,
       code_challenge_method: 'S256',
-      state
+      state,
+      ui_locales: 'hy'
     });
 
     const cookieOptions = {
